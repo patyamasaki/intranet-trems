@@ -26,7 +26,7 @@ endif
 CURRENT_USER=$$(whoami)
 USER_INFO=$$(id -u ${CURRENT_USER})
 LINT=docker run --rm -e LOG_LEVEL="${LOG_LEVEL}" -v "${BACKEND_FOLDER}":/github/workspace plone/code-quality:${CODE_QUALITY_VERSION} check
-FORMAT=docker run --rm --user="${USER_INFO}" -e LOG_LEVEL="${LOG_LEVEL}" -v "${BACKEND_FOLDER}":/github/workspace plone/code-quality:${CODE_QUALITY_VERSION} format
+FORMAT=docker run --rm --userns=keep-id -e LOG_LEVEL="${LOG_LEVEL}" -v "${BACKEND_FOLDER}":/github/workspace plone/code-quality:${CODE_QUALITY_VERSION} format
 
 IMAGE_NAME=ghcr.io/patyamasaki/intranet-trems-backend
 IMAGE_TAG=latest

@@ -14,7 +14,7 @@
         import_steps="plone.app.registry"
         />
   </genericsetup:upgradeSteps>
-  
+
 
   <genericsetup:upgradeSteps
       profile="intranet_trems:default"
