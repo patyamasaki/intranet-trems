@@ -29,7 +29,17 @@
     "title": "Estrutura",
     "description": "Estrutura do TRE-MS",
     "_transitions": [],
-    "_allowed_types": ["Area"],
+    "_permissions": {
+      "intranet_trems: Add Area": [
+        "Site Administrator",
+        "Manager",
+        "Editor",
+        "Contributor"
+      ]
+    },
+    "_allowed_types": [
+      "Area"
+    ],
     "exclude_from_nav": false
   },
   {
