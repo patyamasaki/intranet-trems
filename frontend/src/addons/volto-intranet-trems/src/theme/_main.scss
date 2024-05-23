@@ -4,4 +4,10 @@
 :root {
   --narrow-container-width: 1100px;
   --default-container-width: 1100px;
+  --main-color: #1330a5;
 }
+body.section-estrutura {
+  --main-color: pink;
+}
+
+@import 'blocks/clima';
